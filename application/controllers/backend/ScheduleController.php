@@ -60,7 +60,7 @@ class ScheduleController extends CI_Controller {
 					 );
 			$this->db->insert('tbl_schedule', $data);
 			$this->session->set_flashdata('message', 'swal("Succeed", "New schedule has been added", "success");');
-           redirect('schedule/add');
+           //redirect('schedule/add');
 		/* } */
 		
 	}
