@@ -12,32 +12,13 @@
                     <a class="nav-link" href="<?php echo base_url() ?>"><i class="fas fa-home"></i>&nbsp;Home</a>
                 </li>
                 
-                <?php if ($this->session->userdata('username')) { ?>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Hi, <?php echo $this->session->userdata('nama_lengkap'); ?>
-                        </a>    
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="<?php echo base_url() ?>profile/profilesaya/<?php echo $this->session->userdata('kd_pelanggan') ?>">
-                                <i class="fas fa-id-card"></i> My Profile
-                            </a>
-                            <a class="dropdown-item" href="<?php echo base_url() ?>profile/tiketsaya/<?php echo $this->session->userdata('kd_pelanggan') ?>">
-                                <i class="fas fa-ticket-alt"></i> My Ticket
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="<?php echo base_url() ?>login/logout">
-                                <i class="fas fa-sign-out-alt"></i> Logout
-                            </a>
-                        </div>
-                    </li>
-                <?php } else { ?>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url() ?>login/Daftar">Register</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url() ?>login">Login</a>
-                    </li>
-                <?php } ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url() ?>"><i class="fas fa-info"></i>&nbsp;About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url() ?>"><i class="fas fa-phone"></i>&nbsp;Contact us</a>
+                </li>
+                
             </ul>
         </div>
     </div>

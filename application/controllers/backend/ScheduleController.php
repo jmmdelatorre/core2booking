@@ -5,9 +5,7 @@ class ScheduleController extends CI_Controller {
 	function __construct(){
 
 	parent::__construct();
-		$this->load->helper('tglindo_helper');
-		$this->load->model('CodeGeneratorModel');
-		$this->getsecurity();
+	/* 	auth(); */
 		$this->load->library('form_validation');
 		date_default_timezone_set("Asia/Manila");
 	}
@@ -67,27 +65,9 @@ class ScheduleController extends CI_Controller {
 			$this->db->insert('tbl_schedule', $data);
 			$this->session->set_flashdata('message', 'swal("Succeed", "New schedule has been added", "success");');
            redirect('schedule/add');
-		
-			
 		}
 		
 	}
-	public function viewjadwal($id=''){
-		$data['title'] = "Destination List";
-	 	$sqlcek = $this->db->query("SELECT * FROM tbl_jadwal LEFT JOIN tbl_bus on tbl_jadwal.kd_bus = tbl_bus.kd_bus LEFT JOIN tbl_tujuan on tbl_jadwal.kd_tujuan = tbl_tujuan.kd_tujuan WHERE kd_jadwal ='".$id."'")->row_array();
-	 	if ($sqlcek) {
-	 		$data['asal'] = $this->db->query("SELECT * FROM tbl_tujuan WHERE kd_tujuan = '".$sqlcek['kd_asal']."'")->row_array();
-	 		$data['jadwal'] = $sqlcek;
-			$data['title'] = "View Schedule";
-			// die(print_r($data));
-			$this->load->view('backend/view_jadwal',$data);
-	 	}else{
-	 		$this->session->set_flashdata('message', 'swal("Failed", "Something Went Wrong. Please Try Again", "error");');
-			redirect('backend/jadwal');
-	 	}
-	}	
+	
 }
 
-/* End of file Jadwal.php */
-/* Log on to codeastro.com for more projects */
-/* Location: ./application/controllers/backend/Jadwal.php */

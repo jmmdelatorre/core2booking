@@ -62,6 +62,11 @@
 	</section>
 
 	<script type="text/javascript">
+           document.addEventListener('DOMContentLoaded', function () {
+        const dateInput = document.querySelector('input[name="depart_date"]');
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.setAttribute('min', today);
+    });
 	$(document).ready(function () {
     
     $(".selCity").select2({

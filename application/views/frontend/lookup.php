@@ -24,10 +24,9 @@
 	<body>
 		<!-- navbar -->
 		<?php $this->load->view('frontend/include/base_nav'); ?>
-		<section class="service-area section-gap relative">
-			<div class="overlay overlay-bg"></div>
-			<div class="container">
-				<div class="row d-flex justify-content-center">
+		<section class="banner-area relative section-gap relative" id="home">
+		<div class="container">
+				<div class="row fullscreen d-flex align-items-center justify-content-end">
 					<div class="col-lg-6">
 						<!-- Default Card Example -->
 						<div class="card wobble">

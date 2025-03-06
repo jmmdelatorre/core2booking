@@ -9,8 +9,9 @@
   <!-- Custom styles for this page -->
   <link href="<?= base_url() ?>assets/backend/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
   <link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css">
-
-  <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/datepicker/dist/css/bootstrap-datepicker.min.css">
+<!-- 
+  <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/datepicker/dist/css/bootstrap-datepicker.min.css"> -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <style type="text/css">
         .preloader {
             position: fixed;

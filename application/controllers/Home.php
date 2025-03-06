@@ -17,10 +17,9 @@ class Home extends CI_Controller {
     }
 	public function index(){
 		$data = array(
-            'captcha' => $this->recaptcha->getWidget(), // menampilkan recaptcha
-            'script_captcha' => $this->recaptcha->getScriptTag(), // javascript recaptcha ditaruh di head
+            'captcha' => $this->recaptcha->getWidget(), 
+            'script_captcha' => $this->recaptcha->getScriptTag(), 
         );
-        // die(print_r($data));
 		$this->load->view('frontend/home',$data);		
 	}
 	public function profile($value='')
@@ -46,5 +45,3 @@ class Home extends CI_Controller {
 	}
 }
 
-/* End of file Home.php */
-/* Location: ./application/controllers/Home.php */

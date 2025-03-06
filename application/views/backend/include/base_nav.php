@@ -2,14 +2,14 @@
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('backend/home') ?>">
         <div class="sidebar-brand-icon">
           <i class="fas fa-bus"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">Nexfleet Dynamics</div>
+        <div class="sidebar-brand-text mx-3">Core2.Nexfleet Dynamics</div>
       </a>
 
       <!-- Divider -->
@@ -33,33 +33,16 @@
                 <i class="fas fa fa-clipboard-list"></i>
                 <span> Schedule</span></a>
        
-        <a class="nav-link" href="<?= base_url() ?>backend/tiket">
-          <i class="fas fa-ticket-alt"></i>
-          <span>Tickets</span></a>
-        <a class="nav-link" href="<?= base_url() ?>backend/konfirmasi">
-          <i class="fa fa-dollar-sign"></i>
-          <span>Payments List</span></a>
-        <?php if ($this->session->userdata('level') == '1') { ?>
-           <a class="nav-link" href="<?= base_url() ?>backend/bank">
-          <i class="fas fa fa-piggy-bank"></i>
-          <span>Bank List</span></a>
-        <a class="nav-link" href="<?= base_url() ?>backend/laporan">
+      <a class="nav-link" href="<?= base_url() ?>backend/reports">
           <i class="fa fa fa-file"></i>
           <span>Report</span></a>
+          <a class="nav-link" href="<?= base_url() ?>backend/admin">
+                <i class="fas fa fa-clipboard-list"></i>
+          
+          <span>Administrator</span></a>
              <!-- Nav Item - Pages Collapse Menu -->
-          <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-              <i class="fas fa-fw fa-users"></i>
-              <span>User Management</span>
-            </a>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-              <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="<?= base_url('backend/pelanggan') ?>">Customer List</a>
-                <a class="collapse-item" href="<?= base_url() ?>backend/admin">Administrator</a>
-              </div>
-            </div>
-          </li>
-        <?php }else{ } ?>
+        
+       
       </li>
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
@@ -88,7 +71,7 @@
           </button>
 
           <!-- Topbar Search -->
-          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" action="<?= base_url('backend/order/vieworder') ?>" method="GET">
+      
             <div class="input-group">
               <input type="text" name="order" class="form-control bg-light border-0 small" placeholder="Search Order" aria-label="Search" aria-describedby="basic-addon2">
               <div class="input-group-append">
@@ -97,7 +80,7 @@
                 </button>
               </div>
             </div>
-          </form>
+         
 
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
@@ -128,7 +111,7 @@
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $this->session->userdata('nama_admin'); ?></span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $this->session->userdata('name_admin'); ?></span>
                 <img class="img-profile rounded-circle" src="<?= base_url($this->session->userdata('img_admin')) ?>">
               </a>
               <!-- Dropdown - User Information -->

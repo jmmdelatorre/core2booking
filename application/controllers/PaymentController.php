@@ -107,6 +107,29 @@ class PaymentController extends CI_Controller {
         
         echo $response->getBody();
      }
+
+     public function refund()
+     {
+        $client = new \GuzzleHttp\Client([
+            'verify' => false,
+        ]);
+
+     /*    $id = 'pay_1HM7nhY7PCfpbSffzUWaTGhn'; */
+       
+            $response = $client->request('POST', 'https://api.paymongo.com/refunds', [
+                'body' => '{"data":{"attributes":{"amount":90000,"notes":"none","payment_id":"pay_SnZFXfMJ9dqsgsSvjZrDZ4Kf","reason":"duplicate"}}}',
+                'headers' => [
+                'accept' => 'application/json',
+                'authorization' => 'Basic c2tfdGVzdF9UUVVOdzRSTTlNNUNSWTdMSG9aVGFtWnY6',
+                'content-type' => 'application/json',
+                ],
+            ]);
+        
+        echo $response->getBody();
+     }
+
+
+  
 }
 
 

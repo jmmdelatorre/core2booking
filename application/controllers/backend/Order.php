@@ -4,38 +4,64 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Order extends CI_Controller {
 	function __construct(){
 	parent::__construct();
-		$this->load->helper('tglindo_helper');
-		$this->load->model('getkod_model');
-		$this->getsecurity();
-		date_default_timezone_set("Asia/Jakarta");
+	/* auth(); */
+	date_default_timezone_set("Asia/Manila");
 	}
-	function getsecurity($value=''){
-		if (empty($this->session->userdata('username_admin'))) {
-			$this->session->sess_destroy();
-			redirect('backend/login');
-		}
-	}
+
 	public function index(){
 		$data['title'] = "Booking List";
- 		$data['order'] = $this->db->query("SELECT * FROM tbl_order group by kd_order")->result_array();
-		// die(print_r($data));
+ 		$data['order'] = $this->db->query("
+		SELECT 
+		tbl_transaction.*,
+		tbl_bus.*,
+		tbl_schedule.*,
+		tbl_terminal.*,
+		tbl_transaction.status as payment_status
+		FROM 
+		tbl_transaction
+			LEFT JOIN tbl_bus ON tbl_transaction.bus_id = tbl_bus.bus_id 
+			LEFT JOIN tbl_schedule ON tbl_schedule.schedule_id = tbl_schedule.schedule_id 
+			LEFT JOIN tbl_terminal ON tbl_terminal.terminal_id = tbl_schedule.terminal_origin 
+		group by tbl_transaction.order_code
+		order by  order_code desc
+		")->result_array();
 		$this->load->view('backend/order', $data);
 	}
-	/* Log on to codeastro.com for more projects */
+
 	public function vieworder($id=''){
-		// die(print_r($_GET));
-		$cek = $this->input->get('order').$id;
-	 	$sqlcek = $this->db->query("SELECT * FROM tbl_order LEFT JOIN tbl_jadwal on tbl_order.kd_jadwal = tbl_jadwal.kd_jadwal WHERE kd_order ='".$cek."' ")->result_array();
-	 	if ($sqlcek) {
-	 		$data['tiket'] = $sqlcek;
+		$id = $this->input->get('order').$id;
+	 	$passenger = $this->db->query("SELECT * FROM tbl_transaction LEFT JOIN tbl_schedule on tbl_transaction.schedule_id = tbl_schedule.schedule_id WHERE order_code ='".$id."' ")->result_array();
+	 	if ($passenger) {
+	 		$data['passenger'] = $passenger;
 			$data['title'] = "View Bookings";
-			// die(print_r($sqlcek));
+			
 			$this->load->view('backend/view_order',$data);
 	 	}else{
 	 		$this->session->set_flashdata('message', 'swal("Empty", "No Order", "error");');
     		redirect('backend/tiket');
 	 	}
 	}
+
+	public function check_ticket($id)
+	{
+		  $pid = $this->db->escape($id);
+		  $query  = "
+		  SELECT 
+		  tbl_schedule.*,
+		  tbl_transaction.*,
+		   tbl_bus.*,
+		  (select tbl_terminal.terminal_name from tbl_terminal where tbl_terminal.terminal_id =tbl_schedule.terminal_origin)  as terminal_origin,
+		  (select tbl_terminal.terminal_name from tbl_terminal where tbl_terminal.terminal_id =tbl_schedule.terminal_arrival)  as terminal_arrival,
+		  (select hcity.ctyname from hcity left join tbl_terminal on  hcity.ctycode =tbl_terminal.depart_city where tbl_terminal.terminal_id =tbl_schedule.terminal_origin)  as origin,
+		  (select hcity.ctyname from hcity left join tbl_terminal on hcity.ctycode =tbl_terminal.depart_city where tbl_terminal.terminal_id =tbl_schedule.terminal_arrival)  as destination
+		  FROM tbl_transaction 
+		  LEFT JOIN tbl_schedule on tbl_schedule.schedule_id = tbl_transaction.schedule_id
+		  LEFT JOIN tbl_bus ON tbl_schedule.bus_id = tbl_bus.bus_id 
+		  WHERE tbl_transaction.order_code =$pid";
+		  $ticket['tickets']=$this->db->query($query)->result_array();
+		  $this->load->view('frontend/ticket',$ticket);
+	}
+
 	public function inserttiket($value=''){
 		$id = $this->input->post('kd_order');
 		$asal = $this->input->post('asal_beli');
@@ -78,7 +104,7 @@ class Order extends CI_Controller {
 
 		
 	}
-	/* Log on to codeastro.com for more projects */
+
 	public function kirimemail($id=''){
 		$data['cetak'] = $this->db->query("SELECT * FROM tbl_order LEFT JOIN tbl_jadwal on tbl_order.kd_jadwal = tbl_jadwal.kd_jadwal LEFT JOIN tbl_tujuan on tbl_jadwal.kd_tujuan = tbl_tujuan.kd_tujuan WHERE kd_order ='".$id."'")->result_array();
 		$asal = $data['cetak'][0]['asal_order'];

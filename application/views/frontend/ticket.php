@@ -95,7 +95,7 @@
                 <p><strong>To:</strong> <?= $ticket['destination']; ?></p>
                 <p><strong>Date:</strong> <?= $ticket['departure_date']; ?></p>
                 <p><strong>Seat:</strong> <?= $ticket['seat_number']; ?></p>
-                <p><strong>Fare:</strong> PHP <?= $ticket['fare']; ?></p>
+                <p><strong>Fare:</strong> PHP <?= $ticket['amount']; ?></p>
                 <button class="print-individual-btn" onclick="printIndividualTicket('ticket-<?= $ticket['ticket_no']; ?>')">Print This Ticket</button>
             </div>
         <?php endforeach; ?>

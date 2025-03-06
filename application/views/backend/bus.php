@@ -12,6 +12,7 @@
   </head>
   <body id="page-top">
     <?php $this->load->view('backend/include/base_nav'); ?>
+    
     <div class="container-fluid">
       <h2 class=" text-gray-800">Bus Management</h2>
         

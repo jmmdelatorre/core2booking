@@ -57,7 +57,24 @@ class CodeGeneratorModel extends CI_Model {
             $kd = "001";
         }
         return "ORD".$kd;
+    
     }
+
+
+    function get_admcode(){
+        $q = $this->db->query("SELECT MAX(RIGHT(id_admin,3)) AS kd_max FROM tbl_admin");
+        $kd = "";
+        if($q->num_rows()>0){
+            foreach($q->result() as $k){
+                $tmp = ((int)$k->kd_max)+1;
+                $kd = sprintf("%04s", $tmp);
+            }
+        }else{
+            $kd = "00001";
+        }
+        return "ADM".$kd;
+    }
+
 
 
     function get_kodtuj(){

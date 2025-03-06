@@ -15,15 +15,15 @@
     <?php $this->load->view('backend/include/base_nav'); ?>
 
     <div class="container-fluid">
-  
+    <div class="row">
+    <div class="col-sm-6">
       <div class="card shadow mb-4">
         <div class="card-header py-3">
           <h6 class="m-0 font-weight-bold text-primary">Add Schedule</h6>
         </div>
-        <div class="card-body">
+       
           <div class="card-body">
-            <div class="row">
-              <div class="col-sm-12">
+           
                 <form action="<?= base_url()?>schedule/save" method="post">
                   <div class="form-group">
                     <label class="">Terminal Origin</label>
@@ -54,7 +54,7 @@
                   </div>
                   <div class="form-group">
                     <label  class="">Departure Date</label>
-                    <input type="date" class="form-control"  id="time" name="departure_date" required="" placeholder="Departure Hours">
+                    <input type="date" class="form-control"  id="time" name="departure_date" required="" placeholder="Departure ">
                   </div>
                   <div class="form-group">
                     <label  class="">Departure Hours</label>
@@ -76,39 +76,14 @@
               <input  type="submit" class="btn btn-success pull-rigth" value="Add Schedule">
             </form>
           </div>
-        </div>
+        
       </div>
     </div>
    
     <?php $this->load->view('backend/include/base_footer'); ?>
   
         <?php $this->load->view('backend/include/base_js'); ?>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.10/js/ripples.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.10/js/material.min.js"></script>
-        <script type="text/javascript" src="http://momentjs.com/downloads/moment-with-locales.min.js"></script>
-        <script type="text/javascript" src="<?= base_url('assets/frontend/timepicker') ?>/js/bootstrap-material-datetimepicker.js"></script>
-        <script type="text/javascript">
-          $(document).ready(function()
-          {
-            $('#time').bootstrapMaterialDatePicker
-            ({
-              date: false,
-              shortTime: false,
-              format: 'HH:mm'
-            });
-          })
-        </script>
-        <script type="text/javascript">
-          $(document).ready(function()
-          {
-            $('#time2').bootstrapMaterialDatePicker
-            ({
-              date: false,
-              shortTime: false,
-              format: 'HH:mm'
-            });
-          })
-        </script>
+ 
 
       </body>
     </html>

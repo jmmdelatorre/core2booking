@@ -63,13 +63,13 @@ class TicketController extends CI_Controller {
 			if (!empty($data['schedule'])) {
 				$this->load->view('frontend/check_schedule', $data);
 			} else {
+				$this->load->view('frontend/check_schedule');
 				$this->session->set_flashdata('message', 'swal("Empty", "No Schedule", "error");');
 			}
 	}
 
 	public function booking($schedule_id ,$pass){
 		$sched_id  = $this->db->escape($schedule_id);
-
 		$query  = "
 		SELECT 
 		tbl_schedule.*,
@@ -83,10 +83,19 @@ class TicketController extends CI_Controller {
 		LEFT JOIN tbl_bus ON tbl_schedule.bus_id = tbl_bus.bus_id 
 		WHERE tbl_schedule.schedule_id = $sched_id";
 		$schedule=$this->db->query($query)->row();
+		$query  = "
+		SELECT 
+		seat_number
+		FROM tbl_transaction 
+		LEFT JOIN tbl_schedule on tbl_schedule.schedule_id = tbl_transaction.schedule_id
+		LEFT JOIN tbl_bus ON tbl_schedule.bus_id = tbl_bus.bus_id 
+		WHERE tbl_schedule.status = 'paid' and tbl_transaction.schedule_id =$sched_id";
+		$occupied=$this->db->query($query)->result_array();
 
 		$data['schedule']= $schedule;
 		$data['no_pass']= $pass;
-		
+		$data['occupied']= $occupied;
+	
 		$this->load->view('frontend/booking',$data);
 	}
 
@@ -101,6 +110,8 @@ class TicketController extends CI_Controller {
 		   $scheduleid =$this->input->post('scheduleID'); // array of contact numbers 
 		   $totalAmount =$this->input->post('totAmount'); // array of contact numbers 
 		   $email =$this->input->post('email'); // array of contact numbers 
+		   $disc_id =$this->input->post('id_number'); // array of contact numbers 
+		   $individualFare =$this->input->post('individualFare'); // array of contact numbers 
 		   // Validate data before processing (Optional)
 		   if (empty($seats) || count($seats) !== count($names)) {
 			   echo json_encode(['status' => 'error', 'message' => 'Invalid form data']);
@@ -118,13 +129,14 @@ class TicketController extends CI_Controller {
 		   (select hcity.ctyname from hcity left join tbl_terminal on hcity.ctycode =tbl_terminal.depart_city where tbl_terminal.terminal_id =tbl_schedule.terminal_arrival)  as destination
 		   FROM tbl_schedule 
 		   LEFT JOIN tbl_bus ON tbl_schedule.bus_id = tbl_bus.bus_id 
-		   WHERE tbl_schedule.schedule_id = $sched_id";
+		   WHERE  tbl_schedule.schedule_id = $sched_id" ;
 		   $schedule=$this->db->query($query)->row();
 		   $order_code = $this->CodeGeneratorModel->get_ordercode();
 		   // Prepare data for saving (e.g., inserting into the database)
 		   $passengerData = [];
 		   for ($i = 0; $i < count($seats); $i++) {
 			   $passengerData[] = [
+				   'disc_id' => $disc_id[$i],
 				   'email'=>$email,
 				   'order_code' =>$order_code,
 				   'ticket_no'=>'T'.$order_code.$scheduleid.str_replace('-','', $schedule->bus_id).$seats[$i],
@@ -135,17 +147,19 @@ class TicketController extends CI_Controller {
 				   'age' => $ages[$i],
 				   'gender' => $genders[$i],
 				   'contact' => $contacts[$i],
+				   'amount' => $individualFare[$i],
 				   'fare' => $farePrice,
 				   'totalamount' => $totalAmount,
 			   ];
 		   }
+		  // echo json_encode($passengerData);
 		   $payment_api =$this->payment_details($passengerData);  
 		 // Clean output buffer and ensure no output is sent before redirect
         ob_clean();
 		return $this->output
         ->set_content_type('application/json')
         ->set_status_header(200)
-        ->set_output(json_encode(['redirect_url' => $payment_api]));
+        ->set_output(json_encode(['redirect_url' => $payment_api])); 
 	}
 	
 	public function print_ticket()
@@ -157,11 +171,21 @@ class TicketController extends CI_Controller {
 		  $data = json_decode($payment,true);
 		  $sourceType = $data['data']['attributes']['payments'][0]['attributes']['source']['type'];
 		  $status = $data['data']['attributes']['payments'][0]['attributes']['status'];
-
-		  $this->db->where('payment_id',$payment_id);
-		  $this->db->set('payment_method',$sourceType);
-		  $this->db->set('status',$status);
-		  $this->db->update('tbl_transaction');
+		  $payments = $data['data']['attributes']['payments'] ?? [];
+		//echo json_encode( $payments);
+		  foreach ($payments as $payment) {
+		echo	$txnid = $payment['id'] ?? null;
+		
+			if ($txnid) {
+				$this->db->where('payment_id', $payment_id);
+				$this->db->set('pay_id', $txnid);
+				$this->db->set('payment_method', $sourceType);
+				$this->db->set('status', $status);
+				$this->db->update('tbl_transaction');
+				
+			   
+			}
+		}
 		  $pid = $this->db->escape($payment_id);
 		  $query  = "
 		  SELECT 
@@ -213,55 +237,60 @@ class TicketController extends CI_Controller {
 
 	
 	public function payment_details($data) {
-  
+	
         $client = new \GuzzleHttp\Client([
             'verify' => false,
         ]);
 		$success_url = 'https://' . $_SERVER['HTTP_HOST'] . '/TicketController/print_ticket';
 
-        $intent = [
-            'data' => [
-                'attributes' => [
-                    'cancel_url' =>"https://www.google.com",
-                    'billing' => [
-                        'address' => [
-                            'line1' =>'N/A',
-                            'line2' => 'N/A',
-                            'city' => 'N/A',
-                            'state' => 'N/A',
-                            'postal_code' => 'N/A',
-                            'country' =>'PH',
-                        ],
-                        'name' =>$data[0]['name'],
-                        'email' => $data[0]['email'],
-                        'phone' => $data[0]['contact'],
-                    ],
-                    'description' =>'Fare Payment',
-                    'line_items' => [[
-                        'amount' =>(int)$data[0]['fare'] * 100,
-                        'currency' => 'PHP',
-                        'description' => 'Payment',
-                        'name' => 'Fare ticket',
-                         'quantity' =>count($data),
-                    ]],
-                    'payment_method_types' => ['gcash','paymaya','qrph','billease','card'],
-                    'reference_number' => $data[0]['order_code'],
-                    'send_email_receipt' => true,
-                    'show_description' => true,
-                    'show_line_items' => true,
-                    'statement_descriptor' => $this->input->post('statement_descriptor'),
-                    'success_url' => $success_url
-                ]
-            ]
-        ];
-
+		$lineItems = [];
+		foreach ($data as $passenger) {
+			$lineItems[] = [
+				'amount'      => (int)$passenger['amount'] * 100, // Convert fare to smallest currency unit (e.g. cents)
+				'currency'    => 'PHP',
+				'description' => 'Fare Payment for passenger ' . $passenger['name'],
+				'name'        => 'Fare Payment for passenger ' . $passenger['name'],
+				'quantity'    => 1,
+			];
+		}
+	
+		
+		$intent = [
+			'data' => [
+				'attributes' => [
+					'cancel_url'            => "https://www.google.com",
+					'billing'               => [
+						'address' => [
+							'line1'       => 'N/A',
+							'line2'       => 'N/A',
+							'city'        => 'N/A',
+							'state'       => 'N/A',
+							'postal_code' => 'N/A',
+							'country'     => 'PH',
+						],
+						'name'  => $data[0]['name'],
+						'email' => $data[0]['email'],
+						'phone' => $data[0]['contact'],
+					],
+					'description'           => 'Fare Payment',
+					'line_items'            => $lineItems,
+					'payment_method_types'  => ['gcash','paymaya','qrph','billease','card'],
+					'reference_number'      => $data[0]['order_code'],
+					'send_email_receipt'    => true,
+					'show_description'      => true,
+					'show_line_items'       => true,
+					'statement_descriptor'  => $this->input->post('statement_descriptor'),
+					'success_url'           => $success_url
+				]
+			]
+		];
         try {
             $response = $client->request('POST', 'https://api.paymongo.com/v1/checkout_sessions', [
                 'body' => json_encode($intent),
                 'headers' => [
                     'Content-Type' => 'application/json',
                     'accept' => 'application/json',
-                    'authorization' => 'Basic c2tfdGVzdF9IRlhUOGhkTUxnYXI4RGl4RDN1eENoaDE6',
+                    'authorization' => 'Basic c2tfdGVzdF9UUVVOdzRSTTlNNUNSWTdMSG9aVGFtWnY6',
                 ],
             ]);
             
@@ -296,7 +325,7 @@ class TicketController extends CI_Controller {
 
 		$headers = [
 			'accept' => 'application/json',
-			'authorization' => 'Basic c2tfdGVzdF9IRlhUOGhkTUxnYXI4RGl4RDN1eENoaDE6',
+			'authorization' => 'Basic c2tfdGVzdF9UUVVOdzRSTTlNNUNSWTdMSG9aVGFtWnY6',
 		];
 
 		// Make the request

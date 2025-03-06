@@ -6,8 +6,9 @@ class TerminalController extends CI_Controller {
 	parent::__construct();
 		
 		$this->load->model('CodeGeneratorModel');
-		$this->getsecurity();
+		/* auth(); */
 		date_default_timezone_set("Asia/Manila");
+		
 	}
 	function getsecurity($value=''){
 		$username = $this->session->userdata('username_admin');
