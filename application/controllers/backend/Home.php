@@ -5,7 +5,7 @@ class Home extends CI_Controller {
 	
 	function __construct(){
 	parent::__construct();
-	/* auth(); */
+	auth();
 		date_default_timezone_set("Asia/Jakarta");
 	}
 	public function index(){

@@ -6,7 +6,7 @@ class TerminalController extends CI_Controller {
 	parent::__construct();
 		
 		$this->load->model('CodeGeneratorModel');
-		/* auth(); */
+		auth();
 		date_default_timezone_set("Asia/Manila");
 		
 	}
@@ -31,12 +31,6 @@ class TerminalController extends CI_Controller {
 		$this->load->view('backend/terminal', $data);
 	}
 
-	public function viewrute($id=''){
-		$data['title'] = "Destination/Terminal List";
-		$data['rute'] = $this->db->query("SELECT * FROM tbl_terminal inner join hcity.ctyname on hcity.ctycode = tbl_terminal.depart_city and hcity.ctycode = tbl_terminal.arrival_city  WHERE tbl_terminal.terminal_id = '".$id."' ")->row_array();
-	;
-		$this->load->view('backend/view_tujuan', $data);
-	}
 
 	public function saveterminal(){
 		$terminalcode = $this->CodeGeneratorModel->get_terminalcode();

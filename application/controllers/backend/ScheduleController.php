@@ -5,7 +5,7 @@ class ScheduleController extends CI_Controller {
 	function __construct(){
 
 	parent::__construct();
-	/* 	auth(); */
+		auth();
 		$this->load->library('form_validation');
 		date_default_timezone_set("Asia/Manila");
 	}
@@ -44,10 +44,12 @@ class ScheduleController extends CI_Controller {
 
 	public function saveschedule(){
 		
-			$terminal_departure = $this->input->post('terminal_departure');
+			 $terminal_departure = $this->input->post('terminal_departure');
+			 $terminal_origin = $this->input->post('terminal_origin');
 			$terminal = $this->db->query("SELECT * FROM tbl_terminal
-               WHERE terminal_id ='".$this->input->post('terminal_origin')."'")->row_array();
-			if ($terminal_departure == $terminal['terminal_id']) {
+               WHERE terminal_id ='".$this->db->escape($terminal_origin)."'")->row();
+		
+			if ($terminal) {
 				$this->session->set_flashdata('message', 'swal("Succeed", "Schedule already exists", "error");');
 			redirect('schedule/add');
 			}else{
