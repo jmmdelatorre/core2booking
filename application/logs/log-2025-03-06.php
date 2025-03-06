@@ -1833,3 +1833,326 @@ DEBUG - 2025-03-06 07:42:08 --> Global POST, GET and COOKIE data sanitized
 INFO - 2025-03-06 07:42:08 --> Input Class Initialized
 INFO - 2025-03-06 07:42:08 --> Language Class Initialized
 ERROR - 2025-03-06 07:42:08 --> 404 Page Not Found: Img/elements
+INFO - 2025-03-06 07:47:52 --> Config Class Initialized
+INFO - 2025-03-06 07:47:52 --> Hooks Class Initialized
+DEBUG - 2025-03-06 07:47:52 --> UTF-8 Support Enabled
+INFO - 2025-03-06 07:47:52 --> Utf8 Class Initialized
+INFO - 2025-03-06 07:47:52 --> URI Class Initialized
+INFO - 2025-03-06 07:47:52 --> Router Class Initialized
+INFO - 2025-03-06 07:47:52 --> Output Class Initialized
+INFO - 2025-03-06 07:47:52 --> Security Class Initialized
+DEBUG - 2025-03-06 07:47:52 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-03-06 07:47:52 --> Input Class Initialized
+INFO - 2025-03-06 07:47:52 --> Language Class Initialized
+INFO - 2025-03-06 07:47:52 --> Loader Class Initialized
+INFO - 2025-03-06 07:47:52 --> Helper loaded: url_helper
+INFO - 2025-03-06 07:47:52 --> Helper loaded: file_helper
+INFO - 2025-03-06 07:47:52 --> Helper loaded: auth_helper
+INFO - 2025-03-06 07:47:52 --> Database Driver Class Initialized
+INFO - 2025-03-06 07:47:52 --> Session: Class initialized using 'files' driver.
+INFO - 2025-03-06 07:47:52 --> Model "CodeGeneratorModel" initialized
+INFO - 2025-03-06 07:47:52 --> Controller Class Initialized
+INFO - 2025-03-06 07:47:52 --> Helper loaded: form_helper
+INFO - 2025-03-06 07:47:52 --> Form Validation Class Initialized
+INFO - 2025-03-06 07:47:52 --> File loaded: C:\laragon\www\Booking\application\views\backend/include/base_css.php
+INFO - 2025-03-06 07:47:52 --> File loaded: C:\laragon\www\Booking\application\views\backend/include/base_nav.php
+INFO - 2025-03-06 07:47:52 --> File loaded: C:\laragon\www\Booking\application\views\backend/include/base_footer.php
+INFO - 2025-03-06 07:47:52 --> File loaded: C:\laragon\www\Booking\application\views\backend/include/base_js.php
+INFO - 2025-03-06 07:47:52 --> File loaded: C:\laragon\www\Booking\application\views\backend/admin.php
+INFO - 2025-03-06 07:47:52 --> Final output sent to browser
+DEBUG - 2025-03-06 07:47:52 --> Total execution time: 0.1445
+INFO - 2025-03-06 07:47:52 --> Config Class Initialized
+INFO - 2025-03-06 07:47:52 --> Hooks Class Initialized
+DEBUG - 2025-03-06 07:47:52 --> UTF-8 Support Enabled
+INFO - 2025-03-06 07:47:52 --> Utf8 Class Initialized
+INFO - 2025-03-06 07:47:52 --> URI Class Initialized
+DEBUG - 2025-03-06 07:47:52 --> No URI present. Default controller set.
+INFO - 2025-03-06 07:47:52 --> Router Class Initialized
+INFO - 2025-03-06 07:47:52 --> Output Class Initialized
+INFO - 2025-03-06 07:47:52 --> Security Class Initialized
+DEBUG - 2025-03-06 07:47:52 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-03-06 07:47:52 --> Input Class Initialized
+INFO - 2025-03-06 07:47:52 --> Language Class Initialized
+INFO - 2025-03-06 07:47:52 --> Loader Class Initialized
+INFO - 2025-03-06 07:47:52 --> Helper loaded: url_helper
+INFO - 2025-03-06 07:47:52 --> Helper loaded: file_helper
+INFO - 2025-03-06 07:47:52 --> Helper loaded: auth_helper
+INFO - 2025-03-06 07:47:52 --> Database Driver Class Initialized
+INFO - 2025-03-06 07:47:52 --> Session: Class initialized using 'files' driver.
+INFO - 2025-03-06 07:47:52 --> Model "CodeGeneratorModel" initialized
+INFO - 2025-03-06 07:47:52 --> Controller Class Initialized
+INFO - 2025-03-06 07:47:52 --> Helper loaded: form_helper
+INFO - 2025-03-06 07:47:52 --> Form Validation Class Initialized
+DEBUG - 2025-03-06 07:47:52 --> Config file loaded: C:\laragon\www\Booking\application\config/recaptcha.php
+INFO - 2025-03-06 07:47:52 --> File loaded: C:\laragon\www\Booking\application\views\frontend/include/css.php
+INFO - 2025-03-06 07:47:52 --> File loaded: C:\laragon\www\Booking\application\views\frontend/include/scripts.php
+INFO - 2025-03-06 07:47:52 --> File loaded: C:\laragon\www\Booking\application\views\frontend/include/base_nav.php
+INFO - 2025-03-06 07:47:52 --> File loaded: C:\laragon\www\Booking\application\views\frontend/ticket_create.php
+INFO - 2025-03-06 07:47:52 --> File loaded: C:\laragon\www\Booking\application\views\frontend/home.php
+INFO - 2025-03-06 07:47:52 --> Final output sent to browser
+DEBUG - 2025-03-06 07:47:52 --> Total execution time: 0.1010
+INFO - 2025-03-06 07:47:53 --> Config Class Initialized
+INFO - 2025-03-06 07:47:53 --> Hooks Class Initialized
+DEBUG - 2025-03-06 07:47:53 --> UTF-8 Support Enabled
+INFO - 2025-03-06 07:47:53 --> Utf8 Class Initialized
+INFO - 2025-03-06 07:47:53 --> URI Class Initialized
+INFO - 2025-03-06 07:47:53 --> Router Class Initialized
+INFO - 2025-03-06 07:47:53 --> Output Class Initialized
+INFO - 2025-03-06 07:47:53 --> Security Class Initialized
+DEBUG - 2025-03-06 07:47:53 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-03-06 07:47:53 --> Input Class Initialized
+INFO - 2025-03-06 07:47:53 --> Language Class Initialized
+ERROR - 2025-03-06 07:47:53 --> 404 Page Not Found: Faviconico/index
+INFO - 2025-03-06 07:47:54 --> Config Class Initialized
+INFO - 2025-03-06 07:47:54 --> Hooks Class Initialized
+DEBUG - 2025-03-06 07:47:54 --> UTF-8 Support Enabled
+INFO - 2025-03-06 07:47:54 --> Utf8 Class Initialized
+INFO - 2025-03-06 07:47:54 --> URI Class Initialized
+INFO - 2025-03-06 07:47:54 --> Router Class Initialized
+INFO - 2025-03-06 07:47:54 --> Output Class Initialized
+INFO - 2025-03-06 07:47:54 --> Security Class Initialized
+DEBUG - 2025-03-06 07:47:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-03-06 07:47:54 --> Input Class Initialized
+INFO - 2025-03-06 07:47:54 --> Language Class Initialized
+INFO - 2025-03-06 07:47:54 --> Loader Class Initialized
+INFO - 2025-03-06 07:47:54 --> Helper loaded: url_helper
+INFO - 2025-03-06 07:47:54 --> Helper loaded: file_helper
+INFO - 2025-03-06 07:47:54 --> Helper loaded: auth_helper
+INFO - 2025-03-06 07:47:54 --> Database Driver Class Initialized
+INFO - 2025-03-06 07:47:54 --> Session: Class initialized using 'files' driver.
+INFO - 2025-03-06 07:47:54 --> Model "CodeGeneratorModel" initialized
+INFO - 2025-03-06 07:47:54 --> Controller Class Initialized
+INFO - 2025-03-06 07:47:54 --> Helper loaded: form_helper
+INFO - 2025-03-06 07:47:54 --> Form Validation Class Initialized
+INFO - 2025-03-06 15:47:54 --> File loaded: C:\laragon\www\Booking\application\views\backend/include/base_css.php
+INFO - 2025-03-06 15:47:54 --> File loaded: C:\laragon\www\Booking\application\views\backend/include/base_nav.php
+INFO - 2025-03-06 15:47:54 --> File loaded: C:\laragon\www\Booking\application\views\backend/include/base_footer.php
+INFO - 2025-03-06 15:47:54 --> File loaded: C:\laragon\www\Booking\application\views\backend/include/base_js.php
+INFO - 2025-03-06 15:47:54 --> File loaded: C:\laragon\www\Booking\application\views\backend/schedule.php
+INFO - 2025-03-06 15:47:54 --> Final output sent to browser
+DEBUG - 2025-03-06 15:47:54 --> Total execution time: 0.1060
+INFO - 2025-03-06 07:47:54 --> Config Class Initialized
+INFO - 2025-03-06 07:47:54 --> Hooks Class Initialized
+DEBUG - 2025-03-06 07:47:54 --> UTF-8 Support Enabled
+INFO - 2025-03-06 07:47:54 --> Utf8 Class Initialized
+INFO - 2025-03-06 07:47:54 --> URI Class Initialized
+DEBUG - 2025-03-06 07:47:54 --> No URI present. Default controller set.
+INFO - 2025-03-06 07:47:54 --> Router Class Initialized
+INFO - 2025-03-06 07:47:54 --> Output Class Initialized
+INFO - 2025-03-06 07:47:54 --> Security Class Initialized
+DEBUG - 2025-03-06 07:47:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-03-06 07:47:54 --> Input Class Initialized
+INFO - 2025-03-06 07:47:54 --> Language Class Initialized
+INFO - 2025-03-06 07:47:54 --> Loader Class Initialized
+INFO - 2025-03-06 07:47:54 --> Helper loaded: url_helper
+INFO - 2025-03-06 07:47:54 --> Helper loaded: file_helper
+INFO - 2025-03-06 07:47:54 --> Helper loaded: auth_helper
+INFO - 2025-03-06 07:47:54 --> Database Driver Class Initialized
+INFO - 2025-03-06 07:47:55 --> Session: Class initialized using 'files' driver.
+INFO - 2025-03-06 07:47:55 --> Model "CodeGeneratorModel" initialized
+INFO - 2025-03-06 07:47:55 --> Controller Class Initialized
+INFO - 2025-03-06 07:47:55 --> Helper loaded: form_helper
+INFO - 2025-03-06 07:47:55 --> Form Validation Class Initialized
+DEBUG - 2025-03-06 07:47:55 --> Config file loaded: C:\laragon\www\Booking\application\config/recaptcha.php
+INFO - 2025-03-06 07:47:55 --> File loaded: C:\laragon\www\Booking\application\views\frontend/include/css.php
+INFO - 2025-03-06 07:47:55 --> File loaded: C:\laragon\www\Booking\application\views\frontend/include/scripts.php
+INFO - 2025-03-06 07:47:55 --> File loaded: C:\laragon\www\Booking\application\views\frontend/include/base_nav.php
+INFO - 2025-03-06 07:47:55 --> File loaded: C:\laragon\www\Booking\application\views\frontend/ticket_create.php
+INFO - 2025-03-06 07:47:55 --> File loaded: C:\laragon\www\Booking\application\views\frontend/home.php
+INFO - 2025-03-06 07:47:55 --> Final output sent to browser
+DEBUG - 2025-03-06 07:47:55 --> Total execution time: 0.1051
+INFO - 2025-03-06 07:47:57 --> Config Class Initialized
+INFO - 2025-03-06 07:47:57 --> Hooks Class Initialized
+DEBUG - 2025-03-06 07:47:57 --> UTF-8 Support Enabled
+INFO - 2025-03-06 07:47:57 --> Utf8 Class Initialized
+INFO - 2025-03-06 07:47:57 --> URI Class Initialized
+INFO - 2025-03-06 07:47:57 --> Router Class Initialized
+INFO - 2025-03-06 07:47:57 --> Output Class Initialized
+INFO - 2025-03-06 07:47:57 --> Security Class Initialized
+DEBUG - 2025-03-06 07:47:57 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-03-06 07:47:57 --> Input Class Initialized
+INFO - 2025-03-06 07:47:57 --> Language Class Initialized
+INFO - 2025-03-06 07:47:57 --> Loader Class Initialized
+INFO - 2025-03-06 07:47:57 --> Helper loaded: url_helper
+INFO - 2025-03-06 07:47:57 --> Helper loaded: file_helper
+INFO - 2025-03-06 07:47:57 --> Helper loaded: auth_helper
+INFO - 2025-03-06 07:47:57 --> Database Driver Class Initialized
+INFO - 2025-03-06 07:47:57 --> Session: Class initialized using 'files' driver.
+INFO - 2025-03-06 07:47:57 --> Model "CodeGeneratorModel" initialized
+INFO - 2025-03-06 07:47:57 --> Controller Class Initialized
+INFO - 2025-03-06 07:47:57 --> Helper loaded: form_helper
+INFO - 2025-03-06 07:47:57 --> Form Validation Class Initialized
+INFO - 2025-03-06 15:47:57 --> File loaded: C:\laragon\www\Booking\application\views\backend/include/base_css.php
+INFO - 2025-03-06 15:47:57 --> File loaded: C:\laragon\www\Booking\application\views\backend/include/base_nav.php
+INFO - 2025-03-06 15:47:57 --> File loaded: C:\laragon\www\Booking\application\views\backend/include/base_footer.php
+INFO - 2025-03-06 15:47:57 --> File loaded: C:\laragon\www\Booking\application\views\backend/include/base_js.php
+INFO - 2025-03-06 15:47:57 --> File loaded: C:\laragon\www\Booking\application\views\backend/add_schedule.php
+INFO - 2025-03-06 15:47:57 --> Final output sent to browser
+DEBUG - 2025-03-06 15:47:57 --> Total execution time: 0.1303
+INFO - 2025-03-06 07:47:57 --> Config Class Initialized
+INFO - 2025-03-06 07:47:57 --> Hooks Class Initialized
+DEBUG - 2025-03-06 07:47:57 --> UTF-8 Support Enabled
+INFO - 2025-03-06 07:47:57 --> Utf8 Class Initialized
+INFO - 2025-03-06 07:47:57 --> URI Class Initialized
+DEBUG - 2025-03-06 07:47:57 --> No URI present. Default controller set.
+INFO - 2025-03-06 07:47:57 --> Router Class Initialized
+INFO - 2025-03-06 07:47:57 --> Output Class Initialized
+INFO - 2025-03-06 07:47:57 --> Security Class Initialized
+DEBUG - 2025-03-06 07:47:57 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-03-06 07:47:57 --> Input Class Initialized
+INFO - 2025-03-06 07:47:57 --> Language Class Initialized
+INFO - 2025-03-06 07:47:57 --> Loader Class Initialized
+INFO - 2025-03-06 07:47:57 --> Helper loaded: url_helper
+INFO - 2025-03-06 07:47:57 --> Helper loaded: file_helper
+INFO - 2025-03-06 07:47:57 --> Helper loaded: auth_helper
+INFO - 2025-03-06 07:47:57 --> Database Driver Class Initialized
+INFO - 2025-03-06 07:47:57 --> Session: Class initialized using 'files' driver.
+INFO - 2025-03-06 07:47:57 --> Model "CodeGeneratorModel" initialized
+INFO - 2025-03-06 07:47:57 --> Controller Class Initialized
+INFO - 2025-03-06 07:47:57 --> Helper loaded: form_helper
+INFO - 2025-03-06 07:47:57 --> Form Validation Class Initialized
+DEBUG - 2025-03-06 07:47:57 --> Config file loaded: C:\laragon\www\Booking\application\config/recaptcha.php
+INFO - 2025-03-06 07:47:57 --> File loaded: C:\laragon\www\Booking\application\views\frontend/include/css.php
+INFO - 2025-03-06 07:47:57 --> File loaded: C:\laragon\www\Booking\application\views\frontend/include/scripts.php
+INFO - 2025-03-06 07:47:57 --> File loaded: C:\laragon\www\Booking\application\views\frontend/include/base_nav.php
+INFO - 2025-03-06 07:47:57 --> File loaded: C:\laragon\www\Booking\application\views\frontend/ticket_create.php
+INFO - 2025-03-06 07:47:57 --> File loaded: C:\laragon\www\Booking\application\views\frontend/home.php
+INFO - 2025-03-06 07:47:57 --> Final output sent to browser
+DEBUG - 2025-03-06 07:47:57 --> Total execution time: 0.0931
+INFO - 2025-03-06 07:48:20 --> Config Class Initialized
+INFO - 2025-03-06 07:48:20 --> Hooks Class Initialized
+DEBUG - 2025-03-06 07:48:20 --> UTF-8 Support Enabled
+INFO - 2025-03-06 07:48:20 --> Utf8 Class Initialized
+INFO - 2025-03-06 07:48:20 --> URI Class Initialized
+INFO - 2025-03-06 07:48:20 --> Router Class Initialized
+INFO - 2025-03-06 07:48:20 --> Output Class Initialized
+INFO - 2025-03-06 07:48:20 --> Security Class Initialized
+DEBUG - 2025-03-06 07:48:20 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-03-06 07:48:20 --> Input Class Initialized
+INFO - 2025-03-06 07:48:20 --> Language Class Initialized
+INFO - 2025-03-06 07:48:20 --> Loader Class Initialized
+INFO - 2025-03-06 07:48:20 --> Helper loaded: url_helper
+INFO - 2025-03-06 07:48:20 --> Helper loaded: file_helper
+INFO - 2025-03-06 07:48:20 --> Helper loaded: auth_helper
+INFO - 2025-03-06 07:48:20 --> Database Driver Class Initialized
+INFO - 2025-03-06 07:48:21 --> Session: Class initialized using 'files' driver.
+INFO - 2025-03-06 07:48:21 --> Model "CodeGeneratorModel" initialized
+INFO - 2025-03-06 07:48:21 --> Controller Class Initialized
+INFO - 2025-03-06 07:48:21 --> Helper loaded: form_helper
+INFO - 2025-03-06 07:48:21 --> Form Validation Class Initialized
+INFO - 2025-03-06 07:48:21 --> Config Class Initialized
+INFO - 2025-03-06 07:48:21 --> Hooks Class Initialized
+DEBUG - 2025-03-06 07:48:21 --> UTF-8 Support Enabled
+INFO - 2025-03-06 07:48:21 --> Utf8 Class Initialized
+INFO - 2025-03-06 07:48:21 --> URI Class Initialized
+INFO - 2025-03-06 07:48:21 --> Router Class Initialized
+INFO - 2025-03-06 07:48:21 --> Output Class Initialized
+INFO - 2025-03-06 07:48:21 --> Security Class Initialized
+DEBUG - 2025-03-06 07:48:21 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-03-06 07:48:21 --> Input Class Initialized
+INFO - 2025-03-06 07:48:21 --> Language Class Initialized
+INFO - 2025-03-06 07:48:21 --> Loader Class Initialized
+INFO - 2025-03-06 07:48:21 --> Helper loaded: url_helper
+INFO - 2025-03-06 07:48:21 --> Helper loaded: file_helper
+INFO - 2025-03-06 07:48:21 --> Helper loaded: auth_helper
+INFO - 2025-03-06 07:48:21 --> Database Driver Class Initialized
+INFO - 2025-03-06 07:48:21 --> Session: Class initialized using 'files' driver.
+INFO - 2025-03-06 07:48:21 --> Model "CodeGeneratorModel" initialized
+INFO - 2025-03-06 07:48:21 --> Controller Class Initialized
+INFO - 2025-03-06 07:48:21 --> Helper loaded: form_helper
+INFO - 2025-03-06 07:48:21 --> Form Validation Class Initialized
+INFO - 2025-03-06 15:48:21 --> File loaded: C:\laragon\www\Booking\application\views\backend/include/base_css.php
+INFO - 2025-03-06 15:48:21 --> File loaded: C:\laragon\www\Booking\application\views\backend/include/base_nav.php
+INFO - 2025-03-06 15:48:21 --> File loaded: C:\laragon\www\Booking\application\views\backend/include/base_footer.php
+INFO - 2025-03-06 15:48:21 --> File loaded: C:\laragon\www\Booking\application\views\backend/include/base_js.php
+INFO - 2025-03-06 15:48:21 --> File loaded: C:\laragon\www\Booking\application\views\backend/add_schedule.php
+INFO - 2025-03-06 15:48:21 --> Final output sent to browser
+DEBUG - 2025-03-06 15:48:21 --> Total execution time: 0.1169
+INFO - 2025-03-06 07:48:21 --> Config Class Initialized
+INFO - 2025-03-06 07:48:21 --> Hooks Class Initialized
+DEBUG - 2025-03-06 07:48:21 --> UTF-8 Support Enabled
+INFO - 2025-03-06 07:48:21 --> Utf8 Class Initialized
+INFO - 2025-03-06 07:48:21 --> URI Class Initialized
+DEBUG - 2025-03-06 07:48:21 --> No URI present. Default controller set.
+INFO - 2025-03-06 07:48:21 --> Router Class Initialized
+INFO - 2025-03-06 07:48:21 --> Output Class Initialized
+INFO - 2025-03-06 07:48:21 --> Security Class Initialized
+DEBUG - 2025-03-06 07:48:21 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-03-06 07:48:21 --> Input Class Initialized
+INFO - 2025-03-06 07:48:21 --> Language Class Initialized
+INFO - 2025-03-06 07:48:21 --> Loader Class Initialized
+INFO - 2025-03-06 07:48:21 --> Helper loaded: url_helper
+INFO - 2025-03-06 07:48:21 --> Helper loaded: file_helper
+INFO - 2025-03-06 07:48:21 --> Helper loaded: auth_helper
+INFO - 2025-03-06 07:48:21 --> Database Driver Class Initialized
+INFO - 2025-03-06 07:48:21 --> Session: Class initialized using 'files' driver.
+INFO - 2025-03-06 07:48:21 --> Model "CodeGeneratorModel" initialized
+INFO - 2025-03-06 07:48:21 --> Controller Class Initialized
+INFO - 2025-03-06 07:48:21 --> Helper loaded: form_helper
+INFO - 2025-03-06 07:48:21 --> Form Validation Class Initialized
+DEBUG - 2025-03-06 07:48:21 --> Config file loaded: C:\laragon\www\Booking\application\config/recaptcha.php
+INFO - 2025-03-06 07:48:21 --> File loaded: C:\laragon\www\Booking\application\views\frontend/include/css.php
+INFO - 2025-03-06 07:48:21 --> File loaded: C:\laragon\www\Booking\application\views\frontend/include/scripts.php
+INFO - 2025-03-06 07:48:21 --> File loaded: C:\laragon\www\Booking\application\views\frontend/include/base_nav.php
+INFO - 2025-03-06 07:48:21 --> File loaded: C:\laragon\www\Booking\application\views\frontend/ticket_create.php
+INFO - 2025-03-06 07:48:21 --> File loaded: C:\laragon\www\Booking\application\views\frontend/home.php
+INFO - 2025-03-06 07:48:21 --> Final output sent to browser
+DEBUG - 2025-03-06 07:48:21 --> Total execution time: 0.0921
+INFO - 2025-03-06 07:48:26 --> Config Class Initialized
+INFO - 2025-03-06 07:48:26 --> Hooks Class Initialized
+DEBUG - 2025-03-06 07:48:26 --> UTF-8 Support Enabled
+INFO - 2025-03-06 07:48:26 --> Utf8 Class Initialized
+INFO - 2025-03-06 07:48:26 --> URI Class Initialized
+INFO - 2025-03-06 07:48:26 --> Router Class Initialized
+INFO - 2025-03-06 07:48:26 --> Output Class Initialized
+INFO - 2025-03-06 07:48:26 --> Security Class Initialized
+DEBUG - 2025-03-06 07:48:26 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-03-06 07:48:26 --> Input Class Initialized
+INFO - 2025-03-06 07:48:26 --> Language Class Initialized
+INFO - 2025-03-06 07:48:26 --> Loader Class Initialized
+INFO - 2025-03-06 07:48:26 --> Helper loaded: url_helper
+INFO - 2025-03-06 07:48:26 --> Helper loaded: file_helper
+INFO - 2025-03-06 07:48:26 --> Helper loaded: auth_helper
+INFO - 2025-03-06 07:48:26 --> Database Driver Class Initialized
+INFO - 2025-03-06 07:48:26 --> Session: Class initialized using 'files' driver.
+INFO - 2025-03-06 07:48:26 --> Model "CodeGeneratorModel" initialized
+INFO - 2025-03-06 07:48:26 --> Controller Class Initialized
+INFO - 2025-03-06 07:48:26 --> Helper loaded: form_helper
+INFO - 2025-03-06 07:48:26 --> Form Validation Class Initialized
+INFO - 2025-03-06 15:48:26 --> File loaded: C:\laragon\www\Booking\application\views\backend/include/base_css.php
+INFO - 2025-03-06 15:48:26 --> File loaded: C:\laragon\www\Booking\application\views\backend/include/base_nav.php
+INFO - 2025-03-06 15:48:26 --> File loaded: C:\laragon\www\Booking\application\views\backend/include/base_footer.php
+INFO - 2025-03-06 15:48:26 --> File loaded: C:\laragon\www\Booking\application\views\backend/include/base_js.php
+INFO - 2025-03-06 15:48:26 --> File loaded: C:\laragon\www\Booking\application\views\backend/schedule.php
+INFO - 2025-03-06 15:48:26 --> Final output sent to browser
+DEBUG - 2025-03-06 15:48:26 --> Total execution time: 0.1231
+INFO - 2025-03-06 07:48:26 --> Config Class Initialized
+INFO - 2025-03-06 07:48:26 --> Hooks Class Initialized
+DEBUG - 2025-03-06 07:48:26 --> UTF-8 Support Enabled
+INFO - 2025-03-06 07:48:26 --> Utf8 Class Initialized
+INFO - 2025-03-06 07:48:26 --> URI Class Initialized
+DEBUG - 2025-03-06 07:48:26 --> No URI present. Default controller set.
+INFO - 2025-03-06 07:48:26 --> Router Class Initialized
+INFO - 2025-03-06 07:48:26 --> Output Class Initialized
+INFO - 2025-03-06 07:48:26 --> Security Class Initialized
+DEBUG - 2025-03-06 07:48:26 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-03-06 07:48:26 --> Input Class Initialized
+INFO - 2025-03-06 07:48:26 --> Language Class Initialized
+INFO - 2025-03-06 07:48:26 --> Loader Class Initialized
+INFO - 2025-03-06 07:48:26 --> Helper loaded: url_helper
+INFO - 2025-03-06 07:48:26 --> Helper loaded: file_helper
+INFO - 2025-03-06 07:48:26 --> Helper loaded: auth_helper
+INFO - 2025-03-06 07:48:26 --> Database Driver Class Initialized
+INFO - 2025-03-06 07:48:26 --> Session: Class initialized using 'files' driver.
+INFO - 2025-03-06 07:48:26 --> Model "CodeGeneratorModel" initialized
+INFO - 2025-03-06 07:48:26 --> Controller Class Initialized
+INFO - 2025-03-06 07:48:26 --> Helper loaded: form_helper
+INFO - 2025-03-06 07:48:26 --> Form Validation Class Initialized
+DEBUG - 2025-03-06 07:48:26 --> Config file loaded: C:\laragon\www\Booking\application\config/recaptcha.php
+INFO - 2025-03-06 07:48:26 --> File loaded: C:\laragon\www\Booking\application\views\frontend/include/css.php
+INFO - 2025-03-06 07:48:26 --> File loaded: C:\laragon\www\Booking\application\views\frontend/include/scripts.php
+INFO - 2025-03-06 07:48:26 --> File loaded: C:\laragon\www\Booking\application\views\frontend/include/base_nav.php
+INFO - 2025-03-06 07:48:26 --> File loaded: C:\laragon\www\Booking\application\views\frontend/ticket_create.php
+INFO - 2025-03-06 07:48:26 --> File loaded: C:\laragon\www\Booking\application\views\frontend/home.php
+INFO - 2025-03-06 07:48:26 --> Final output sent to browser
+DEBUG - 2025-03-06 07:48:26 --> Total execution time: 0.0899

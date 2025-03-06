@@ -47,7 +47,7 @@ class ScheduleController extends CI_Controller {
 				$this->session->set_flashdata('message', 'swal("Succeed", "Schedule already exists", "error");');
 			redirect('schedule/add');
 			}else{ */
-			$schedcode = $this->CodeGeneratorModel->get_schedule();
+			echo $schedcode = $this->CodeGeneratorModel->get_schedule();
 			$data = array(
 					'schedule_id' => $schedcode,
 					'terminal_origin' => $terminal_departure,
