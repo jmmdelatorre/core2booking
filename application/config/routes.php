@@ -24,5 +24,3 @@ $route['terminal/save']['POST'] = 'backend/TerminalController/saveterminal';
 $route['schedule']['GET'] = 'backend/ScheduleController/index';
 $route['schedule/add']['GET'] = 'backend/ScheduleController/view_schedule';
 $route['schedule/save']['POST'] = 'backend/ScheduleController/saveschedule';
-
-$route['login']['POST'] = 'backend/LoginController/user_login';

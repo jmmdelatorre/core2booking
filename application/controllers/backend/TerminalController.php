@@ -6,7 +6,7 @@ class TerminalController extends CI_Controller {
 	parent::__construct();
 		
 		$this->load->model('CodeGeneratorModel');
-		auth();
+		/* auth(); */
 		date_default_timezone_set("Asia/Manila");
 		
 	}

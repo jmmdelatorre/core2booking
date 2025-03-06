@@ -5,18 +5,12 @@ class ScheduleController extends CI_Controller {
 	function __construct(){
 
 	parent::__construct();
-		auth();
+		/* auth(); */
 		$this->load->library('form_validation');
 		date_default_timezone_set("Asia/Manila");
 	}
 
-	function getsecurity($value=''){
-		$username = $this->session->userdata('username_admin');
-		if (empty($username)) {
-			$this->session->sess_destroy();
-			redirect('backend/login');
-		}
-	}
+	
 	public function index(){
 		$data['title'] = "Schedule Management";
 		$data['schedule'] = $this->db->query("

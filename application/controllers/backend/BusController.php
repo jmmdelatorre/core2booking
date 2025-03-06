@@ -7,7 +7,7 @@ class BusController extends CI_Controller {
 	parent::__construct();
 		$this->load->model('CodeGeneratorModel');
 		date_default_timezone_set("Asia/Manila");
-        auth();
+        /* auth(); */
 	}
 
 	public function index(){
