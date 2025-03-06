@@ -40,13 +40,13 @@ class ScheduleController extends CI_Controller {
 		
 			 $terminal_departure = $this->input->post('terminal_departure');
 			 $terminal_origin = $this->input->post('terminal_origin');
-			$terminal = $this->db->query("SELECT * FROM tbl_terminal
+			/* $terminal = $this->db->query("SELECT * FROM tbl_terminal
                WHERE terminal_id ='".$this->db->escape($terminal_origin)."'")->row();
 		
 			if ($terminal) {
 				$this->session->set_flashdata('message', 'swal("Succeed", "Schedule already exists", "error");');
 			redirect('schedule/add');
-			}else{
+			}else{ */
 			$schedcode = $this->CodeGeneratorModel->get_schedule();
 			$data = array(
 					'schedule_id' => $schedcode,
@@ -61,7 +61,7 @@ class ScheduleController extends CI_Controller {
 			$this->db->insert('tbl_schedule', $data);
 			$this->session->set_flashdata('message', 'swal("Succeed", "New schedule has been added", "success");');
            redirect('schedule/add');
-		}
+		/* } */
 		
 	}
 	
