@@ -75,10 +75,15 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
+/* 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => 'root',
-	'database' => 'bus',
+	'database' => 'bus', */
+	
+'hostname' => 'localhost',
+'username' => 'core2_corenex1',
+'password' => 'root',
+'database' => 'core2_bus_book',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

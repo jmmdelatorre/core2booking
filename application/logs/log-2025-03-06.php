@@ -2716,3 +2716,59 @@ INFO - 2025-03-06 08:16:48 --> File loaded: C:\laragon\www\Booking\application\v
 INFO - 2025-03-06 08:16:48 --> File loaded: C:\laragon\www\Booking\application\views\frontend/home.php
 INFO - 2025-03-06 08:16:48 --> Final output sent to browser
 DEBUG - 2025-03-06 08:16:48 --> Total execution time: 0.0931
+INFO - 2025-03-06 08:20:09 --> Config Class Initialized
+INFO - 2025-03-06 08:20:09 --> Hooks Class Initialized
+DEBUG - 2025-03-06 08:20:09 --> UTF-8 Support Enabled
+INFO - 2025-03-06 08:20:09 --> Utf8 Class Initialized
+INFO - 2025-03-06 08:20:09 --> URI Class Initialized
+INFO - 2025-03-06 08:20:09 --> Router Class Initialized
+INFO - 2025-03-06 08:20:09 --> Output Class Initialized
+INFO - 2025-03-06 08:20:09 --> Security Class Initialized
+DEBUG - 2025-03-06 08:20:09 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-03-06 08:20:09 --> Input Class Initialized
+INFO - 2025-03-06 08:20:09 --> Language Class Initialized
+INFO - 2025-03-06 08:20:09 --> Loader Class Initialized
+INFO - 2025-03-06 08:20:09 --> Helper loaded: url_helper
+INFO - 2025-03-06 08:20:09 --> Helper loaded: file_helper
+INFO - 2025-03-06 08:20:09 --> Helper loaded: auth_helper
+INFO - 2025-03-06 08:20:09 --> Database Driver Class Initialized
+INFO - 2025-03-06 08:20:09 --> Session: Class initialized using 'files' driver.
+INFO - 2025-03-06 08:20:09 --> Model "CodeGeneratorModel" initialized
+INFO - 2025-03-06 08:20:09 --> Controller Class Initialized
+INFO - 2025-03-06 08:20:09 --> Helper loaded: form_helper
+INFO - 2025-03-06 08:20:09 --> Form Validation Class Initialized
+INFO - 2025-03-06 16:20:09 --> File loaded: C:\laragon\www\Booking\application\views\backend/include/base_css.php
+INFO - 2025-03-06 16:20:09 --> File loaded: C:\laragon\www\Booking\application\views\backend/include/base_nav.php
+INFO - 2025-03-06 16:20:09 --> File loaded: C:\laragon\www\Booking\application\views\backend/include/base_footer.php
+INFO - 2025-03-06 16:20:09 --> File loaded: C:\laragon\www\Booking\application\views\backend/include/base_js.php
+INFO - 2025-03-06 16:20:09 --> File loaded: C:\laragon\www\Booking\application\views\backend/schedule.php
+INFO - 2025-03-06 16:20:09 --> Final output sent to browser
+DEBUG - 2025-03-06 16:20:09 --> Total execution time: 0.1059
+INFO - 2025-03-06 08:20:16 --> Config Class Initialized
+INFO - 2025-03-06 08:20:16 --> Hooks Class Initialized
+DEBUG - 2025-03-06 08:20:16 --> UTF-8 Support Enabled
+INFO - 2025-03-06 08:20:16 --> Utf8 Class Initialized
+INFO - 2025-03-06 08:20:16 --> URI Class Initialized
+INFO - 2025-03-06 08:20:16 --> Router Class Initialized
+INFO - 2025-03-06 08:20:16 --> Output Class Initialized
+INFO - 2025-03-06 08:20:16 --> Security Class Initialized
+DEBUG - 2025-03-06 08:20:16 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-03-06 08:20:16 --> Input Class Initialized
+INFO - 2025-03-06 08:20:16 --> Language Class Initialized
+INFO - 2025-03-06 08:20:16 --> Loader Class Initialized
+INFO - 2025-03-06 08:20:16 --> Helper loaded: url_helper
+INFO - 2025-03-06 08:20:16 --> Helper loaded: file_helper
+INFO - 2025-03-06 08:20:16 --> Helper loaded: auth_helper
+INFO - 2025-03-06 08:20:16 --> Database Driver Class Initialized
+INFO - 2025-03-06 08:20:16 --> Session: Class initialized using 'files' driver.
+INFO - 2025-03-06 08:20:16 --> Model "CodeGeneratorModel" initialized
+INFO - 2025-03-06 08:20:16 --> Controller Class Initialized
+INFO - 2025-03-06 08:20:16 --> Helper loaded: form_helper
+INFO - 2025-03-06 08:20:16 --> Form Validation Class Initialized
+INFO - 2025-03-06 16:20:16 --> File loaded: C:\laragon\www\Booking\application\views\backend/include/base_css.php
+INFO - 2025-03-06 16:20:16 --> File loaded: C:\laragon\www\Booking\application\views\backend/include/base_nav.php
+INFO - 2025-03-06 16:20:16 --> File loaded: C:\laragon\www\Booking\application\views\backend/include/base_footer.php
+INFO - 2025-03-06 16:20:16 --> File loaded: C:\laragon\www\Booking\application\views\backend/include/base_js.php
+INFO - 2025-03-06 16:20:16 --> File loaded: C:\laragon\www\Booking\application\views\backend/schedule.php
+INFO - 2025-03-06 16:20:16 --> Final output sent to browser
+DEBUG - 2025-03-06 16:20:16 --> Total execution time: 0.0815
